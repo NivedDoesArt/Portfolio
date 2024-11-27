@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kirang+Haerang&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 html,
 * {
@@ -11,9 +11,12 @@ html,
 header {
     position: fixed;
     width: 100%;
-    height: fit-content;
+    z-index: 100;
+
+    background: linear-gradient(to bottom, #0005, #fff0);
 }
 
+/*
 header p {
     margin-left: 50px;
     padding: 0.25em;
@@ -21,9 +24,13 @@ header p {
 
     cursor: pointer;
     font-size: 1.5em;
+    color: #fff;
+    text-shadow: #000 0px 0px 20px;
+    font-weight: 800;
 
-    transition: 100ms;
+    transition: 200ms;
 }
+    */
 
 header p:hover {
     transform: translateY(-0.1em);
@@ -35,12 +42,16 @@ header ul {
 }
 
 header ul li {
-    padding: 0.25em;
+    padding: 0.5em;
     float: left;
+
 
     list-style-type: none;
     font-size: 1.5em;
     cursor: pointer;
+    color: #fff;
+    text-shadow: #000 0px 0px 20px;
+    font-weight: 300;
 
     transition: 200ms;
 }
