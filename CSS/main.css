@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kirang+Haerang&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@font-face {
+    font-family: 'Socialico';
+    src: url('../FONTS/TTF/Socialico-Regular.ttf');
+}
+@font-face {
+    font-family: 'SocialicoPlus';
+    src: url('../FONTS/TTF/SocialicoPlus-Plus.ttf');
+}
+
 
 html,
 * {
@@ -36,12 +45,39 @@ header p:hover {
     transform: translateY(-0.1em);
 }
 
-header ul {
+.socials {
+    margin-left: 50px;
+    float: left;
+}
+
+.socials li {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.4em;
+    float: left;
+
+    list-style-type: none;
+    font-family: SocialicoPlus;
+    font-size: 2.5em;
+    cursor: pointer;
+    color: #fff;
+    text-shadow: #000 0px 0px 20px;
+    font-weight: 300;
+
+    transition: 200ms;
+}
+
+.socials li:hover {
+    transform: translateY(-0.1em);
+}
+
+
+.navbar {
     margin-right: 50px;
     float: right;
 }
 
-header ul li {
+.navbar li {
     padding: 0.5em;
     float: left;
 
@@ -56,10 +92,10 @@ header ul li {
     transition: 200ms;
 }
 
-header ul li:hover {
+.navbar li:hover {
     transform: translateY(-0.1em);
 }
 
 .currentPage {
-    font-weight: 800;
+    font-weight: 800 !important;
 }

@@ -41,7 +41,7 @@
     color: #fff;
     text-shadow: #000 2px 2px 18px;
     font-weight: 400;
-    font-size: calc(0.5em + 1vw);
+    font-size: calc(0.75em + 0.6vw);
 }
 
 .landing ul {
@@ -55,7 +55,7 @@
 
     color: #fff;
     text-shadow: #000 1px 1px 10px;
-    font-size: 0.85vw
+    font-size: calc(0.5em + 0.6vw);
 }
 
 
@@ -71,11 +71,27 @@
 
     background: #fff;
     border-radius: 10px;
+    border-bottom-right-radius: 0px;
     box-shadow: #0008 5px 5px 50px;
+    overflow-y: scroll;
+}
+
+#infoCard::-webkit-scrollbar {
+    width: 10px;
+}
+
+#infoCard::-webkit-scrollbar-thumb {
+    background-color: #1138;
+    border-radius: 5px;
+}
+
+#infoCard::-webkit-scrollbar-button {
+    background-color: #fff0;
+    height: 5px;
 }
 
 #infoCard h1 {
-    font-size: 4rem;
+    font-size: calc(2rem + 2vw);
     padding: 0px;
     margin: 0px;
 
@@ -87,10 +103,11 @@
 
 #infoCard p {
     padding: 2vh;
+    padding-top: 5vh;
     text-align: justify;
     text-align-last: left;
 
-    font-size: calc(0.7rem + 0.4vw);
+    font-size: calc(0.5em + 0.6vw);
     color: #113;
 }
 
@@ -107,6 +124,7 @@ unique {
 
     background-color: #fff;
     border-radius: 10px;
+    border-bottom-right-radius: 0px;
     box-shadow: #0008 5px 5px 50px;
 }
 
@@ -119,6 +137,7 @@ unique {
 
     background-color: #fff;
     border-radius: 10px;
+    border-bottom-right-radius: 0px;
     box-shadow: #0008 5px 5px 50px;
 }
 
