@@ -216,3 +216,42 @@ unique {
 #nextImage:hover {
     filter: invert(100%);
 }
+
+#moreScroll {
+    position: absolute;
+    bottom: 5vh;
+    width: 100%;
+
+    text-align: center;
+    color: #fff8;
+    line-height: 10px;
+    pointer-events: none;
+
+    opacity: 0%;
+    transition: 0.75s;
+}
+
+
+
+/* EVERYTHING INSIDE OF THE CONTENT CLASS */
+
+.content h1 {
+    text-align: center;
+
+    color: #224;
+    font-size: calc(0.5em + 5vw);
+    font-weight: 100;
+    font-family: "Caveat", cursive;
+}
+
+#middleLine {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 5px;
+
+    background-color: #224;
+    border-radius: 5px;
+
+    transition: 1s;
+}
