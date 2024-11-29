@@ -8,25 +8,26 @@
     <link rel="stylesheet" href="../CSS/main.css">
 </head>
 
-<body>
-    <header>
+<body id="body">
+    <header id="header">
         <!--p onclick="window.location.href = 'index.html'">Devin de Wit</p-->
         <ul class="socials">
-            <li title="Github repository" onclick="window.open('https://github.com/NivedDoesArt/Portfolio')">Z</li>
-            <li title="Instagram" onclick="window.open('https://www.instagram.com/niveddoesart/')">I</li>
-            <li title="Email me!" onclick="window.location.href = '../HTML/contact.html'">M</li>
+            <li title="Github repository" onclick="window.open('https://github.com/NivedDoesArt/Portfolio')">z</li>
+            <li title="Instagram" onclick="window.open('https://www.instagram.com/niveddoesart/')">i</li>
+            <li title="LinkedIn" onclick="window.open('https://www.linkedin.com/in/devin-de-wit-8a048b221/')" style="font-family: Socialico;">i</li>
+            <li title="Email me!" onclick="window.location.href = 'HTML/contact.html'">m</li>
         </ul>
 
         <ul class="navbar">
-            <li onclick="window.location.href = '../index.html'">Home</li>
-            <li onclick="window.location.href = '../HTML/hobby.html'" class="currentPage">Hobby's</li>
-            <li onclick="window.location.href = '../HTML/contact.html'">Contact</li>
-            <li onclick="window.location.href = '../HTML/cv.html'">CV</li>
-            <li onclick="window.location.href = '../HTML/ervaring.html'">Ervaring</li>
+            <li onclick="navbar('../index.html')">Home</li>
+            <li onclick="navbar('../HTML/hobby.html')" class="currentPage">Hobby's</li>
+            <li onclick="navbar('../HTML/contact.html')">Contact</li>
+            <li onclick="navbar('../HTML/cv.html')">CV</li>
         </ul>
     </header>
 </body>
 
 <script src="../JS/main.js"></script>
+<script src="../JS/hobby.js"></script>
 
 </html>
