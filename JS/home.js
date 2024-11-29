@@ -113,11 +113,6 @@ function nextImage() {
         document.getElementById('backgroundDevin').style.backgroundSize = 'cover'
     }
     if (currentImage == 5) {
-        document.getElementById('backgroundDevin').style.backgroundPosition = 'top 40% center'
-        document.getElementById('backgroundDevin').style.backgroundRepeat = 'no-repeat'
-        document.getElementById('backgroundDevin').style.backgroundSize = 'cover'
-    }
-    if (currentImage == 6) {
         document.getElementById('backgroundDevin').style.backgroundPosition = 'top 0% center'
         document.getElementById('backgroundDevin').style.backgroundRepeat = 'no-repeat'
         document.getElementById('backgroundDevin').style.backgroundSize = 'cover'
