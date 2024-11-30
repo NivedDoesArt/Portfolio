@@ -10,6 +10,12 @@ async function navbar(location) {
     window.location.href = location
 }
 
+
+
+if (window.innerWidth >= 1000) {
+    document.getElementById('burgerMenu').remove()
+}
+
 var burgerMenuState = false
 
 function burgerMenuToggle() {
