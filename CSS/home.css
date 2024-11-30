@@ -158,9 +158,11 @@ unique {
     min-height: 100vh;
     transform: translateY(100vh);
     z-index: 1;
+    margin-bottom: 5vh;
 
     background-color: #fff;
     box-shadow: #0008 0px 0px 50vh 10vh;
+    overflow: hidden;
 }
 
 #animate1 {
@@ -245,13 +247,93 @@ unique {
 }
 
 #middleLine {
-    width: 60%;
+    position: absolute;
+    width: 50%;
     margin-left: 20%;
     margin-right: 20%;
-    height: 5px;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 3px;
 
     background-color: #224;
     border-radius: 5px;
+    text-align-last: justify;
 
     transition: 1s;
+}
+
+.timelineDeco {
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+
+    background-color: #224;
+    border-radius: 5px;
+    pointer-events: none;
+
+    transition: 0.5s;
+}
+
+.timelineDecoBall {
+    bottom: 0px;
+    width: 5px;
+    height: 5px;
+    transform: translateX(-1px) translateY(15px);
+
+    border-radius: 10px;
+    background-color: #224;
+    pointer-events: none;
+
+    transition: 0.5s;
+}
+
+.leftTL {
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 50%;
+    padding-right: 5%;
+    margin-top: 5vh;
+
+    box-shadow: inset #224 0px -1px;
+    color: #224;
+    text-align: justify;
+    text-align-last: left;
+    
+    transition: 0.5s;
+    opacity: 0%;
+    transform: scale(90%);
+}
+
+.leftTL h2 {
+    cursor: pointer;
+}
+
+.leftTL h2:hover {
+    text-decoration: underline;
+}
+
+.rightTL {
+    width: 40%;
+    padding-left: 5%;
+    margin-right: 5%;
+    margin-left: 50%;
+    margin-top: 5vh;
+
+    text-align: right;
+    box-shadow: inset #224 0px -1px;
+    color: #224;
+    text-align: justify;
+    text-align-last: right;
+
+    transition: 0.5s;
+    opacity: 0%;
+    transform: scale(90%);
+}
+
+.rightTL h2 {
+    cursor: pointer;
+}
+
+.rightTL h2:hover {
+    text-decoration: underline;
 }

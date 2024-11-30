@@ -1,3 +1,5 @@
+/* MANDATORY THINGS LOL */
+
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kirang+Haerang&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @font-face {
     font-family: 'Socialico';
@@ -22,6 +24,8 @@ html,
     transition: 0.5s;
     overflow-x: hidden;
 }
+
+/* HEADER RELATED */
 
 header {
     position: fixed;
@@ -92,3 +96,7 @@ header p:hover {
 .currentPage {
     font-weight: 800 !important;
 }
+
+
+
+/* FOOTER RELATED */

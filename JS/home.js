@@ -1,12 +1,69 @@
+var timelineAnimationToggle = 1
+var distanceScrolled = 0
+
 addEventListener("scroll", (event) => {
-    var distanceScrolled = window.scrollY
+    distanceScrolled = window.scrollY
     console.log(distanceScrolled)
     document.getElementById('backgroundDevin').style.transform = 'scale(' + (100 + (distanceScrolled / 75)) + '%) translateY(-' + (distanceScrolled / 4) + 'px)'
 
     document.getElementById('moreScroll').style = null
+
+    //TIMELINE FUNCTIONALITY
+
+    if (distanceScrolled >= 350 && timelineAnimationToggle == 1) {
+        tlAnimToggle()
+    }
+
+
+
+    if (distanceScrolled >= 277 && timelineAnimationToggle == 2) {
+        document.getElementById('timelineElement1').style.opacity = '100%'
+        document.getElementById('timelineElement1').style.transform = 'scale(100%)'
+    }
+    if (distanceScrolled >= 439 && timelineAnimationToggle == 2) {
+        document.getElementById('timelineElement2').style.opacity = '100%'
+        document.getElementById('timelineElement2').style.transform = 'scale(100%)'
+    }
+    if (distanceScrolled >= 604 && timelineAnimationToggle == 2) {
+        document.getElementById('timelineElement3').style.opacity = '100%'
+        document.getElementById('timelineElement3').style.transform = 'scale(100%)'
+    }
+    if (distanceScrolled >= 770 && timelineAnimationToggle == 2) {
+        document.getElementById('timelineElement4').style.opacity = '100%'
+        document.getElementById('timelineElement4').style.transform = 'scale(100%)'
+    }
+    if (distanceScrolled >= 959 && timelineAnimationToggle == 2) {
+        document.getElementById('timelineElement5').style.opacity = '100%'
+        document.getElementById('timelineElement5').style.transform = 'scale(100%)'
+    }
+    if (distanceScrolled >= 1170 && timelineAnimationToggle == 2) {
+        document.getElementById('timelineElement6').style.opacity = '100%'
+        document.getElementById('timelineElement6').style.transform = 'scale(100%)'
+    }
+    if (distanceScrolled >= 1356 && timelineAnimationToggle == 2) {
+        document.getElementById('timelineElement7').style.opacity = '100%'
+        document.getElementById('timelineElement7').style.transform = 'scale(100%)'
+    }
+    if (distanceScrolled >= 1542 && timelineAnimationToggle == 2) {
+        document.getElementById('timelineElement8').style.opacity = '100%'
+        document.getElementById('timelineElement8').style.transform = 'scale(100%)'
+    }
+    if (distanceScrolled >= 1732 && timelineAnimationToggle == 2) {
+        document.getElementById('timelineElement9').style.opacity = '100%'
+        document.getElementById('timelineElement9').style.transform = 'scale(100%)'
+    }
+    if (distanceScrolled >= 1940 && timelineAnimationToggle == 2) {
+        document.getElementById('timelineElement10').style.opacity = '100%'
+        document.getElementById('timelineElement10').style.transform = 'scale(100%)'
+    }
+    if (distanceScrolled >= 2127 && timelineAnimationToggle == 2) {
+        document.getElementById('timelineElement11').style.opacity = '100%'
+        document.getElementById('timelineElement11').style.transform = 'scale(100%)'
+    }
+
 });
 
-window.onload = async function() {
+window.onload = async function () {
     console.log('good morning :O')
 
     document.getElementById('body').style.opacity = '100%'
@@ -43,11 +100,37 @@ window.onload = async function() {
 
 
 
+async function tlAnimToggle() {
+    for (i = 1; i <= 6; i++) {
+        document.getElementById('tlDeco' + i).style.transform = 'scaleX(0%)'
+    }
+
+    document.getElementById('middleLine').style.width = '3px'
+    document.getElementById('middleLine').style.paddingLeft = '0px'
+    document.getElementById('middleLine').style.paddingRight = '0px'
+    document.getElementById('middleLine').style.marginLeft = 'calc((100% / 2) - (3px / 2))'
+    document.getElementById('middleLine').style.marginRight = 'calc((100% / 2) - (3px / 2))'
+
+    await new Promise(r => setTimeout(r, 1250));
+
+    document.getElementById('middleLine').style.height = '100%'
+
+    await new Promise(r => setTimeout(r, 100));
+
+    timelineAnimationToggle = 2
+
+    window.scrollTo(0, (distanceScrolled - 1))
+}
+
+
+
+
+
 // FUNCTIONS
 
 var currentImage = 1
 
-function prevImage() {
+async function prevImage() {
     currentImage = currentImage - 1
 
     if (currentImage == 0) {
@@ -55,6 +138,7 @@ function prevImage() {
     }
 
     document.getElementById('backgroundDevin').style.background = 'url(IMG/' + currentImage + '.jpg)'
+    document.getElementById('backgroundDevin').style.transition = '1s'
 
     if (currentImage == 1) {
         document.getElementById('backgroundDevin').style.backgroundPosition = 'top 40% center'
@@ -81,9 +165,12 @@ function prevImage() {
         document.getElementById('backgroundDevin').style.backgroundRepeat = 'no-repeat'
         document.getElementById('backgroundDevin').style.backgroundSize = 'cover'
     }
+
+    await new Promise(r => setTimeout(r, 100));
+    document.getElementById('backgroundDevin').style.transition = '0s'
 }
 
-function nextImage() {
+async function nextImage() {
     currentImage = currentImage + 1
 
     if (currentImage == 6) {
@@ -91,6 +178,7 @@ function nextImage() {
     }
 
     document.getElementById('backgroundDevin').style.background = 'url(IMG/' + currentImage + '.jpg)'
+    document.getElementById('backgroundDevin').style.transition = '1s'
 
     if (currentImage == 1) {
         document.getElementById('backgroundDevin').style.backgroundPosition = 'top 40% center'
@@ -117,4 +205,7 @@ function nextImage() {
         document.getElementById('backgroundDevin').style.backgroundRepeat = 'no-repeat'
         document.getElementById('backgroundDevin').style.backgroundSize = 'cover'
     }
+
+    await new Promise(r => setTimeout(r, 100));
+    document.getElementById('backgroundDevin').style.transition = '0s'
 }
