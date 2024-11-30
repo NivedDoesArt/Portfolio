@@ -99,4 +99,49 @@ header p:hover {
 
 
 
-/* FOOTER RELATED */
+/* EVERYTHING FOOTER RELATED */
+
+footer {
+    width: 100%;
+    z-index: 1000;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+    background: linear-gradient(to top, #ddd, #fff);
+}
+
+footer ul {
+    display: inline-block;
+    width: calc((100% / 3) - 11%);
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+
+    color: #2248;
+}
+
+footer ul li {
+    display: block;
+    position: relative;
+
+    font-family: "Caveat", cursive;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #224f !important;
+}
+
+footer ul p {
+    display: block;
+    position: relative;
+}
+
+footer ul a {
+    display: block;
+    position: relative;
+
+    color: #2248;
+}
+
+footer ul a:hover {
+    color: #224c;
+}

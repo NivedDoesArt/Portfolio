@@ -56,7 +56,7 @@ addEventListener("scroll", (event) => {
         document.getElementById('timelineElement10').style.opacity = '100%'
         document.getElementById('timelineElement10').style.transform = 'scale(100%)'
     }
-    if (distanceScrolled >= 2127 && timelineAnimationToggle == 2) {
+    if (distanceScrolled >= 2068 && timelineAnimationToggle == 2) {
         document.getElementById('timelineElement11').style.opacity = '100%'
         document.getElementById('timelineElement11').style.transform = 'scale(100%)'
     }

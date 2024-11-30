@@ -246,6 +246,36 @@ unique {
     font-family: "Caveat", cursive;
 }
 
+#contentDecoration1 {
+    position: absolute;
+    right: 15vw;
+    width: 20vw;
+    height: 20vw;
+
+    background: url(../IMG/GRADUATION.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: 0.5s;
+    transform: scale(90%) translateX(55vw);
+}
+
+#contentDecoration2 {
+    position: absolute;
+    left: 15vw;
+    width: 20vw;
+    height: 20vw;
+
+    background: url(../IMG/SKATING.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: 0.5s;
+    transform: scale(90%) translateX(-55vw);
+}
+
 #middleLine {
     position: absolute;
     width: 50%;
@@ -258,6 +288,7 @@ unique {
     background-color: #224;
     border-radius: 5px;
     text-align-last: justify;
+    z-index: -1;
 
     transition: 1s;
 }
