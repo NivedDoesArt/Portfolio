@@ -145,3 +145,29 @@ footer ul a {
 footer ul a:hover {
     color: #224c;
 }
+
+
+
+/* MOBILE MODE */
+
+#burgerMenu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: calc(4vh + 2vw);
+    height: calc(4vh + 2vw);
+
+    cursor: pointer;
+}
+
+#burgerMenu div {
+    width: calc((4vh + 2vw) * 2);
+    height: calc((4vh + 2vw) / 3);
+
+    background-color: #fff;
+    border-radius: 20px;
+    transform: scale(50%) translateX(-50%);
+    box-shadow: #224 0px 0px 30px;
+
+    transition: 0.25s;
+}

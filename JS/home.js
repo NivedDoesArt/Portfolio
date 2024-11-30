@@ -3,7 +3,6 @@ var distanceScrolled = 0
 
 addEventListener("scroll", (event) => {
     distanceScrolled = window.scrollY
-    console.log(distanceScrolled)
     document.getElementById('backgroundDevin').style.transform = 'scale(' + (100 + (distanceScrolled / 75)) + '%) translateY(-' + (distanceScrolled / 4) + 'px)'
 
     document.getElementById('moreScroll').style = null
@@ -68,7 +67,9 @@ window.onload = async function () {
 
     document.getElementById('body').style.opacity = '100%'
     document.getElementById('backgroundDevin').style.transform = 'scale(100%)'
-    document.getElementById('header').style.transform = 'scale(100%)'
+    if (document.getElementById('header')) {
+        document.getElementById('header').style.transform = 'scale(100%)'
+    }
 
     await new Promise(r => setTimeout(r, 1000));
 
@@ -208,4 +209,16 @@ async function nextImage() {
 
     await new Promise(r => setTimeout(r, 100));
     document.getElementById('backgroundDevin').style.transition = '0s'
+}
+
+
+
+// DETECT MOBILE MODE OR WHATEVER HAHA
+
+if (window.innerWidth < 1000) {
+    console.log('Mobile mode enabled')
+
+    document.getElementById('header').children[0].remove()
+    document.getElementById('header').children[0].remove()
+    document.getElementById('header').style.height = '50px'
 }
