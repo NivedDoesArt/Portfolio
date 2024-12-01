@@ -1,20 +1,7 @@
 var timelineAnimationToggle = 1
 var distanceScrolled = 0
 
-addEventListener("scroll", (event) => {
-    distanceScrolled = window.scrollY
-    document.getElementById('backgroundDevin').style.transform = 'scale(' + (100 + (distanceScrolled / 75)) + '%) translateY(-' + (distanceScrolled / 4) + 'px)'
-
-    document.getElementById('moreScroll').style = null
-
-    //TIMELINE FUNCTIONALITY
-
-    if (distanceScrolled >= 350 && timelineAnimationToggle == 1) {
-        tlAnimToggle()
-    }
-
-
-
+function scrollAnimationPresets() {
     if (distanceScrolled >= 277 && timelineAnimationToggle == 2) {
         document.getElementById('timelineElement1').style.opacity = '100%'
         document.getElementById('timelineElement1').style.transform = 'scale(100%)'
@@ -59,7 +46,21 @@ addEventListener("scroll", (event) => {
         document.getElementById('timelineElement11').style.opacity = '100%'
         document.getElementById('timelineElement11').style.transform = 'scale(100%)'
     }
+}
 
+addEventListener("scroll", (event) => {
+    distanceScrolled = window.scrollY
+    document.getElementById('backgroundDevin').style.transform = 'scale(' + (100 + (distanceScrolled / 75)) + '%) translateY(-' + (distanceScrolled / 4) + 'px)'
+
+    document.getElementById('moreScroll').style = null
+
+    //TIMELINE FUNCTIONALITY
+
+    if (distanceScrolled >= 350 && timelineAnimationToggle == 1) {
+        tlAnimToggle()
+    }
+
+    scrollAnimationPresets()
 });
 
 window.onload = async function () {
@@ -88,14 +89,18 @@ window.onload = async function () {
 
     await new Promise(r => setTimeout(r, 150));
 
-    document.getElementById('animate4').style.opacity = '100%'
-    document.getElementById('animate4').style.transform = 'translateY(0px)'
+    if (document.getElementById('animate4')) {
+        document.getElementById('animate4').style.opacity = '100%'
+        document.getElementById('animate4').style.transform = 'translateY(0px)'    
+    }
     document.getElementById('animate3').style.transform = 'translateY(0px)'
 
     await new Promise(r => setTimeout(r, 250));
 
-    document.getElementById('animate5').style.opacity = '100%'
-    document.getElementById('animate5').style.transform = 'translateY(0px)'
+    if (document.getElementById('animate5')) {
+        document.getElementById('animate5').style.opacity = '100%'
+        document.getElementById('animate5').style.transform = 'translateY(0px)'    
+    }
     document.getElementById('animate3').style.opacity = '100%'
 }
 
@@ -120,7 +125,7 @@ async function tlAnimToggle() {
 
     timelineAnimationToggle = 2
 
-    window.scrollTo(0, (distanceScrolled - 1))
+    scrollAnimationPresets()
 }
 
 
@@ -221,4 +226,29 @@ if (window.innerWidth < 1000) {
     document.getElementById('header').children[0].remove()
     document.getElementById('header').children[0].remove()
     document.getElementById('header').style.height = '50px'
+
+    document.getElementById('footerSocials').style.width = 'calc((100% / 2) - 11%)'
+    document.getElementById('footerLinks').style.width = 'calc((100% / 2) - 11%)'
+    document.getElementById('footerContact').style.width = 'calc(100% - 11%)'
+
+    document.getElementById('infoCard').style.width = '80vw'
+    document.getElementById('infoCard').style.height = '30vh'
+    document.getElementById('infoCard').style.left = '10vw'
+    document.getElementById('infoCard').style.right = 'auto'
+    document.getElementById('infoCard').style.top = 'auto'
+    document.getElementById('infoCard').style.bottom = '10vh'
+    document.getElementById('infoCard').children[1].setAttribute('style', 'font-size: calc(0.4rem + 2vw);')
+    document.getElementById('animate4').remove()
+    document.getElementById('animate5').remove()
+
+    document.getElementById('contentDecoration1').style.transform = 'scale(200%) translateX(25vw)'
+    document.getElementById('contentDecoration2').style.transform = 'scale(200%) translateX(-25vw)'
+
+    for (i = 1; i <= 11; i++) {
+        document.getElementById('timelineElement' + i).children[0].setAttribute('style', 'font-size: calc(3vw);')
+        document.getElementById('timelineElement' + i).children[1].setAttribute('style', 'font-size: calc(3vw);')
+        document.getElementById('timelineElement' + i).children[2].setAttribute('style', 'font-size: calc(3vw);')
+        document.getElementById('timelineElement' + i).children[3].setAttribute('style', 'font-size: calc(3vw);')
+        document.getElementById('timelineElement' + i).children[4].setAttribute('style', 'font-size: calc(3vw);')
+    }
 }

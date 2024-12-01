@@ -14,7 +14,8 @@
         <ul class="socials">
             <li title="Github repository" onclick="window.open('https://github.com/NivedDoesArt/Portfolio')">z</li>
             <li title="Instagram" onclick="window.open('https://www.instagram.com/niveddoesart/')">i</li>
-            <li title="LinkedIn" onclick="window.open('https://www.linkedin.com/in/devin-de-wit-8a048b221/')" style="font-family: Socialico;">i</li>
+            <li title="LinkedIn" onclick="window.open('https://www.linkedin.com/in/devin-de-wit-8a048b221/')"
+                style="font-family: Socialico;">i</li>
             <li title="Email me!" onclick="navbar('../HTML/contact.html')">m</li>
         </ul>
 
@@ -24,6 +25,30 @@
             <li onclick="navbar('../HTML/contact.html')">Contact</li>
             <li onclick="navbar('../HTML/cv.html')" class="currentPage">CV</li>
         </ul>
+
+        <!--Mobile burgermenu-->
+        <div id="burgerMenu" onclick="burgerMenuToggle()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="mobileMenu">
+            <ul class="mobileNavbar">
+                <li onclick="navbar('../index.html')">Home</li>
+                <li onclick="navbar('../HTML/hobby.html')">Hobby's</li>
+                <li onclick="navbar('../HTML/contact.html')">Contact</li>
+                <li onclick="navbar('../HTML/cv.html')" class="currentPage">CV</li>
+                </ul>
+
+            <ul id="mobileSocials">
+                <li title="Github repository" onclick="window.open('https://github.com/NivedDoesArt/Portfolio')">z</li>
+                <li title="Instagram" onclick="window.open('https://www.instagram.com/niveddoesart/')">i</li>
+                <li title="LinkedIn" onclick="window.open('https://www.linkedin.com/in/devin-de-wit-8a048b221/')"
+                    style="font-family: Socialico;">i</li>
+                <li title="Email me!" onclick="window.location.href = 'HTML/contact.html'">m</li>
+            </ul>
+        </div>
     </header>
 </body>
 

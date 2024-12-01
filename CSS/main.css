@@ -108,6 +108,7 @@ footer {
     padding-bottom: 5vh;
 
     background: linear-gradient(to top, #ddd, #fff);
+    text-align: center;
 }
 
 footer ul {
@@ -156,6 +157,7 @@ footer ul a:hover {
     right: 10px;
     width: calc(4vh + 2vw);
     height: calc(4vh + 2vw);
+    z-index: 99999999999999999;
 
     cursor: pointer;
 }
@@ -170,4 +172,50 @@ footer ul a:hover {
     box-shadow: #224 0px 0px 30px;
 
     transition: 0.25s;
+}
+
+#mobileMenu {
+    position: fixed;
+    padding-top: calc((4vh + 2vw) + 20px);
+    padding-bottom: calc((4vh + 2vw) + 20px);
+    width: 100%;
+
+    background: linear-gradient(to bottom, #000, #fff0);
+    color: #fff;
+    text-shadow: #224 0px 0px 30px;
+
+    transition: 0.75s;
+    transform: translateY(-100%);
+}
+
+.mobileNavbar {
+    text-align: center;
+}
+
+.mobileNavbar li {
+    display: inline-block;
+    width: fit-content;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 5.5vw;
+}
+
+#mobileSocials {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align-last: justify;
+
+    transition: 0.75s;
+    transform: scale(50%);
+}
+
+#mobileSocials li {
+    display: inline-block;
+    width: fit-content;
+    padding: 10px;
+
+    cursor: pointer;
+    font-size: 10vw;
+    font-family: SocialicoPlus;
 }

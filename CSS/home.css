@@ -190,7 +190,7 @@ unique {
 #prevImage {
     position: absolute;
     height: 100vh;
-    width: 20vh;
+    width: 10vw;
     top: 0px;
     left: 0px;
 
@@ -199,14 +199,14 @@ unique {
     transition: 0.5s;
 }
 
-#prevImage:hover {
+#prevImage:active {
     filter: invert(100%);
 }
 
 #nextImage {
     position: absolute;
     height: 100vh;
-    width: 20vh;
+    width: 10vw;
     top: 0px;
     right: 0px;
 
@@ -215,7 +215,7 @@ unique {
     transition: 0.5s;
 }
 
-#nextImage:hover {
+#nextImage:active {
     filter: invert(100%);
 }
 
