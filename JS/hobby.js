@@ -1,4 +1,4 @@
-window.onload = async function() {
+window.onload = async function () {
     console.log('good morning :O')
 
     document.getElementById('body').style.opacity = '100%'
@@ -20,7 +20,7 @@ if (window.innerWidth < 1000) {
     document.getElementById('footerLinks').style.width = 'calc((100% / 2) - 11%)'
     document.getElementById('footerContact').style.width = 'calc(100% - 11%)'
 
-    for(i = 1; i <= 7; i++) {
+    for (i = 1; i <= 7; i++) {
         document.getElementById('title' + i).style.textAlign = 'center'
         document.getElementById('title' + i).style.fontSize = '8vw'
         document.getElementById('title' + i).style.paddingLeft = '0px'
@@ -36,6 +36,29 @@ if (window.innerWidth < 1000) {
 
 
 
-function imageDisplay(location) {
-    console.log(location)
+var imageDisplayStatus = false
+
+async function imageDisplay(location, list) {
+    if (imageDisplayStatus == false) {
+        imageDisplayStatus = true
+        document.getElementById('imageDisplayImg').setAttribute('src', location)
+
+        document.getElementById('imageDisplayHolder').style.opacity = '100%'
+        document.getElementById('imageDisplayHolder').style.pointerEvents = 'all'
+        document.getElementById('imageDisplayHolder').style.opacity = '100%'
+
+        await new Promise(r => setTimeout(r, 500));
+
+        document.getElementById('imageDisplayImg').style.opacity = '100%'
+        document.getElementById('imageDisplayImg').style.transform = 'scale(90%) translateY(0px)'
+    } else if (imageDisplayStatus == true) {
+        imageDisplayStatus = false
+        document.getElementById('imageDisplayHolder').style = null
+        document.getElementById('imageDisplayImg').style.transform = 'scale(90%) translateY(-50px)'
+        document.getElementById('imageDisplayImg').style.opacity = '0%'
+
+        await new Promise(r => setTimeout(r, 500));
+
+        document.getElementById('imageDisplayImg').style = null
+    }
 }

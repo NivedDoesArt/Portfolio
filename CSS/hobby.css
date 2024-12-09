@@ -63,6 +63,7 @@
     opacity: 75%;
     cursor: pointer;
     transform: scale(95%);
+    filter: saturate(0%);
 
     transition: 0.2s;
 }
@@ -70,6 +71,11 @@
 .imageGallary img:hover {
     opacity: 100%;
     transform: scale(98%);
+    filter: saturate(100%);
+}
+
+.imageGallary img:active {
+    transform: scale(97%) !important;
 }
 
 .imageGallary::-webkit-scrollbar {
@@ -85,4 +91,32 @@
 .imageGallary::-webkit-scrollbar-thumb:hover {
     background-color: #113a;
     border-radius: 5px;
+}
+
+
+
+/* IMAGE DISPLAYING TECHONOLIES WOOPWWOP */
+
+#imageDisplayHolder {
+    position: fixed;
+    z-index: 9999999999999999999999999;
+    width: 100%;
+    height: 100vh;
+
+    background-color: #112b;
+    pointer-events: none;
+
+    opacity: 0%;
+    transition: 0.5s;
+}
+
+#imageDisplayHolder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+
+    transform: scale(90%) translateY(50px);
+    opacity: 0%;
+    transition: 0.5s;
 }
