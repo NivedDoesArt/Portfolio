@@ -21,14 +21,22 @@ if (window.innerWidth < 1000) {
     document.getElementById('footerContact').style.width = 'calc(100% - 11%)'
 
     for (i = 1; i <= 7; i++) {
-        document.getElementById('title' + i).style.textAlign = 'center'
         document.getElementById('title' + i).style.fontSize = '8vw'
-        document.getElementById('title' + i).style.paddingLeft = '0px'
 
         document.getElementById('description' + i).style.width = 'calc(100% - (9.5vw * 2))'
         document.getElementById('description' + i).style.textAlign = 'justify'
         document.getElementById('description' + i).style.paddingLeft = '9.5vw'
         document.getElementById('description' + i).style.paddingRight = '9.5vw'
+        document.getElementById('description' + i).style.fontSize = 'calc(0.5rem + 1vw)'
+
+        document.getElementById('imgGal' + i).style.height = '20vh'
+        document.getElementById('imgGal' + i).style.width = '100%'
+        document.getElementById('imgGal' + i).style.marginLeft = '0px'
+        document.getElementById('imgGal' + i).style.marginRight = '0px'
+        var imgGal = (document.getElementById('imgGal' + i).children.length - 1)
+        for (ii = 0; ii <= imgGal; ii++) {
+            document.getElementById('imgGal' + i).children[ii].setAttribute('style', 'opacity: 100%; transform: scale(98%); filter: saturate(100%);')
+        }
     }
 }
 
@@ -41,6 +49,7 @@ var imageDisplayStatus = false
 async function imageDisplay(location, list) {
     if (imageDisplayStatus == false) {
         imageDisplayStatus = true
+        console.log(list)
         document.getElementById('imageDisplayImg').setAttribute('src', location)
 
         document.getElementById('imageDisplayHolder').style.opacity = '100%'
