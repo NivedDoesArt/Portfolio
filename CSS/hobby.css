@@ -121,3 +121,25 @@
     opacity: 0%;
     transition: 0.5s;
 }
+
+#nextImage {
+    position: absolute;
+    padding: 10px;
+    display: flexbox;
+    align-items: center;
+    top: 0px;
+    right: 0px;
+
+    background-color: #112  ;
+}
+
+#prevImage {
+    position: absolute;
+    padding: 10px;
+    display: flexbox;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+
+    background-color: #112  ;
+}
