@@ -65,6 +65,7 @@
     cursor: pointer;
     transform: scale(95%);
     filter: saturate(0%);
+    user-select: none;
 
     transition: 0.2s;
 }
@@ -120,6 +121,7 @@
     transform: scale(90%) translateY(50px);
     opacity: 0%;
     transition: 0.5s;
+    user-select: none;
 }
 
 #nextImage {
@@ -139,6 +141,7 @@
 
     cursor: pointer ;
     text-shadow: #112 5px 5px 20px;
+    user-select: none;
 }
 
 #prevImage {
@@ -158,4 +161,5 @@
 
     cursor: pointer ;
     text-shadow: #000 0px 0px 30px;
+    user-select: none;
 }
