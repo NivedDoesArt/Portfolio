@@ -46,10 +46,16 @@ if (window.innerWidth < 1000) {
 
 var imageDisplayStatus = false
 
-async function imageDisplay(location, list) {
+var selectedList = null
+var imageWithinList = null
+var maxScrollAmount = null
+
+async function imageDisplay(location, list, title) {
     if (imageDisplayStatus == false) {
         imageDisplayStatus = true
-        console.log(list)
+        selectedList = list
+        imageWithinList = title
+
         document.getElementById('imageDisplayImg').setAttribute('src', location)
 
         document.getElementById('imageDisplayHolder').style.opacity = '100%'
@@ -70,4 +76,68 @@ async function imageDisplay(location, list) {
 
         document.getElementById('imageDisplayImg').style = null
     }
+}
+
+function nextImage() {
+    if (selectedList == 1) {
+        maxScrollAmount = 13
+    }
+    if (selectedList == 2) {
+        maxScrollAmount = 18
+    }
+    if (selectedList == 3) {
+        maxScrollAmount = 11
+    }
+    if (selectedList == 4) {
+        maxScrollAmount = 6
+    }
+    if (selectedList == 5) {
+        maxScrollAmount = 7
+    }
+    if (selectedList == 6) {
+        maxScrollAmount = 4
+    }
+    if (selectedList == 7) {
+        maxScrollAmount = 20
+    }
+
+
+
+    imageWithinList++
+    if (imageWithinList == maxScrollAmount + 1) {
+        imageWithinList = 1
+    }
+    document.getElementById('imageDisplayImg').setAttribute('src', '../IMG/hobby/hobby' + selectedList + '/' + imageWithinList + '.jpg')
+}
+
+function prevImage() {
+    if (selectedList == 1) {
+        maxScrollAmount = 13
+    }
+    if (selectedList == 2) {
+        maxScrollAmount = 18
+    }
+    if (selectedList == 3) {
+        maxScrollAmount = 11
+    }
+    if (selectedList == 4) {
+        maxScrollAmount = 6
+    }
+    if (selectedList == 5) {
+        maxScrollAmount = 7
+    }
+    if (selectedList == 6) {
+        maxScrollAmount = 4
+    }
+    if (selectedList == 7) {
+        maxScrollAmount = 20
+    }
+
+
+
+    imageWithinList--
+    if (imageWithinList == 0) {
+        imageWithinList = maxScrollAmount
+    }
+    document.getElementById('imageDisplayImg').setAttribute('src', '../IMG/hobby/hobby' + selectedList + '/' + imageWithinList + '.jpg')
 }

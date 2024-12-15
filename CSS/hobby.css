@@ -124,22 +124,38 @@
 
 #nextImage {
     position: absolute;
-    padding: 10px;
-    display: flexbox;
+    display: flex;
     align-items: center;
     top: 0px;
-    right: 0px;
+    right: 10px;
+    height: 100vh;
 
-    background-color: #112  ;
+    color: #fff;
+    font-size: 3rem;
+}
+
+#nextImage p {
+    padding: 20px;
+
+    cursor: pointer ;
+    text-shadow: #112 5px 5px 20px;
 }
 
 #prevImage {
     position: absolute;
-    padding: 10px;
-    display: flexbox;
+    display: flex;
     align-items: center;
     top: 0px;
-    left: 0px;
+    left: 10px;
+    height: 100vh;
 
-    background-color: #112  ;
+    color: #fff;
+    font-size: 3rem;
+}
+
+#prevImage p {
+    padding: 20px;
+
+    cursor: pointer ;
+    text-shadow: #000 0px 0px 30px;
 }
