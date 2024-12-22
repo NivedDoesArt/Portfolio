@@ -1,0 +1,43 @@
+#content {
+    padding: 30vh;
+    padding-left: 20vw;
+    padding-bottom: 0px;
+}
+
+#content h1 {
+    text-align: left;
+}
+
+#content p {
+    text-align: left;
+}
+
+#content a {
+    display: block;
+    width: fit-content;
+    text-align: left;
+}
+
+
+
+#myTime {
+    padding: 30vh;
+    padding-left: 20vw;
+    padding-top: 5vh;
+
+    text-align: left;
+}
+
+
+
+img {
+    position: absolute;
+    height: 40vh;
+    width: 40vh;
+    top: 30vh;
+    right: 20vw;
+    
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}

@@ -9,6 +9,8 @@ window.onload = async function () {
 
 // DETECT MOBILE MODE OR WHATEVER HAHA
 
+var imageDeviceScale = 90
+
 if (window.innerWidth < 1000) {
     console.log('Mobile mode enabled')
 
@@ -38,6 +40,14 @@ if (window.innerWidth < 1000) {
             document.getElementById('imgGal' + i).children[ii].setAttribute('style', 'opacity: 100%; transform: scale(98%); filter: saturate(100%);')
         }
     }
+
+    document.getElementById('prevImage').remove()
+    document.getElementById('nextImage').remove()
+
+    document.getElementById('imageDisplayHolder').style.overflowX = 'scroll'
+    document.getElementById('imageDisplayImg').style.width = '110%'
+
+    imageDeviceScale = 80
 }
 
 
@@ -50,11 +60,16 @@ var selectedList = null
 var imageWithinList = null
 var maxScrollAmount = null
 
+var imageScrollCenter = null
+
 async function imageDisplay(location, list, title) {
     if (imageDisplayStatus == false) {
         imageDisplayStatus = true
         selectedList = list
         imageWithinList = title
+
+        document.getElementById('body').style.height = '100%'
+        document.getElementById('body').style.overflow = 'hidden'
 
         document.getElementById('imageDisplayImg').setAttribute('src', location)
 
@@ -62,19 +77,32 @@ async function imageDisplay(location, list, title) {
         document.getElementById('imageDisplayHolder').style.pointerEvents = 'all'
         document.getElementById('imageDisplayHolder').style.opacity = '100%'
 
+        document.getElementById('imageDisplayHolder').scrollTo(100, 100)
+        imageScrollCenter = (document.getElementById('imageDisplayHolder').scrollLeft / 2)
+        document.getElementById('imageDisplayHolder').scrollTo(imageScrollCenter, imageScrollCenter)
+
         await new Promise(r => setTimeout(r, 500));
 
         document.getElementById('imageDisplayImg').style.opacity = '100%'
-        document.getElementById('imageDisplayImg').style.transform = 'scale(90%) translateY(0px)'
+        document.getElementById('imageDisplayImg').style.transform = 'scale(' + imageDeviceScale + '%) translateY(0px)'
     } else if (imageDisplayStatus == true) {
         imageDisplayStatus = false
+
+        document.getElementById('body').setAttribute('style', 'opacity: 1;')
+
         document.getElementById('imageDisplayHolder').style = null
-        document.getElementById('imageDisplayImg').style.transform = 'scale(90%) translateY(-50px)'
+        if (window.innerWidth < 1000) {
+            document.getElementById('imageDisplayHolder').style.overflowX = 'scroll'
+        }
+        document.getElementById('imageDisplayImg').style.transform = 'scale(' + imageDeviceScale + '%) translateY(-50px)'
         document.getElementById('imageDisplayImg').style.opacity = '0%'
 
         await new Promise(r => setTimeout(r, 500));
 
         document.getElementById('imageDisplayImg').style = null
+        if (window.innerWidth < 1000) {
+            document.getElementById('imageDisplayImg').style.width = '110%'
+        }
     }
 }
 
@@ -141,3 +169,17 @@ function prevImage() {
     }
     document.getElementById('imageDisplayImg').setAttribute('src', '../IMG/hobby/hobby' + selectedList + '/' + imageWithinList + '.jpg')
 }
+
+
+
+document.getElementById('imageDisplayHolder').addEventListener("scroll", (event) => {
+
+    if (document.getElementById('imageDisplayHolder').scrollLeft == imageScrollCenter * 2) {
+        nextImage()
+        document.getElementById('imageDisplayHolder').scrollTo(imageScrollCenter, imageScrollCenter)
+
+    } else if (document.getElementById('imageDisplayHolder').scrollLeft == 0) {
+        prevImage()
+        document.getElementById('imageDisplayHolder').scrollTo(imageScrollCenter, imageScrollCenter)
+    }
+})

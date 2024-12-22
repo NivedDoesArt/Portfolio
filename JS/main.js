@@ -41,3 +41,9 @@ function burgerMenuToggle() {
         document.getElementById('mobileSocials').style = null
     }
 }
+
+addEventListener("scroll", (event) => {
+    if (burgerMenuState == true) {
+        burgerMenuToggle()
+    }
+})
