@@ -1,0 +1,44 @@
+.left {
+    padding: 10vw;
+    padding-bottom: 0px;
+}
+
+.left h1 {
+    font-size: 3rem;
+}
+
+.left h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #0008;
+}
+
+.left p {
+    font-size: 1.5rem;
+    width: 70vw;
+    padding-right: 10vw;
+}
+
+
+
+.right {
+    padding: 10vw;
+    padding-bottom: 0px;
+    text-align: right;
+}
+
+.right h1 {
+    font-size: 3rem;
+}
+
+.right h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #0008;
+}
+
+.right p {
+    font-size: 1.5rem;
+    width: 70vw;
+    padding-left: 10vw;
+}

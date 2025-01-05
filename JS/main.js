@@ -4,10 +4,14 @@ window.onbeforeunload = function () {
 
 
 
-async function navbar(location) {
+async function navbar(location, aditional) {
     document.getElementById('body').style.opacity = '0%'
     await new Promise(r => setTimeout(r, 500));
     window.location.href = location
+
+    if (aditional) {
+        sessionStorage.setItem('cvScroll', aditional)
+    }
 }
 
 
