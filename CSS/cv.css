@@ -64,7 +64,7 @@
     right: 0px;
     display: flex;
     justify-content: space-evenly;
-    font-size: calc(0.25em + 0.75vw);
+    font-size: calc(0.25vh + 0.75vw);
     
     background: linear-gradient(to bottom, #fff0 89%,  #8af 90%, #fff 100%);
 }
@@ -215,6 +215,7 @@
 
     text-align: center;
     color: #fff;
+    font-size: 1rem;
 }
 
 
