@@ -9,6 +9,13 @@ window.onload = async function() {
     console.log(sessionStorage.getItem('cvScroll'))
 
     sessionStorage.setItem('cvScroll', null)
+
+    for (i = 1; i < 5; i++) {
+        await new Promise(r => setTimeout(r, 500));
+
+        document.getElementById('card' + i).style.opacity = '100%'
+        document.getElementById('card' + i).style.transform = 'translateY(0px)'
+    }
 }
 
 

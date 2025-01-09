@@ -56,6 +56,167 @@
 
 
 
+#rightSection {
+    width: calc(100% - 300px);
+    height: 110vh;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: calc(0.25em + 0.75vw);
+    
+    background: linear-gradient(to bottom, #fff0 89%,  #8af 90%, #fff 100%);
+}
+
+#backgroundImage {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 90%;
+
+    background: url('../IMG/palmtree.png');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card1 {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    margin: 20px;
+    margin-left: 40px;
+    margin-top: 60px;
+
+    box-shadow: 5px 5px 20px #1248;
+    border-radius: 10px;
+
+    opacity: 0%;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+#card1 h1 {
+    padding: 10px;
+    padding-top: 0px;
+}
+
+#card1 ul {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+.vaardigheden1 {
+    box-sizing: border-box;
+    width: calc(60% - 10px);
+    display: inline-block;
+}
+
+.vaardigheden2 {
+    box-sizing: border-box;
+    width: calc(40% - 10px);
+    display: inline-block;
+    text-align: right;
+}
+
+
+
+#card2 {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    margin: 20px;
+    margin-top: 60px;
+
+    box-shadow: 5px 5px 20px #1248;
+    border-radius: 10px;
+
+    opacity: 0%;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+#card2 h1 {
+    padding: 10px;
+    padding-top: 0px;
+}
+
+#card2 ul {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+
+
+#card3 {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    margin: 20px;
+    margin-top: 60px;
+
+    box-shadow: 5px 5px 20px #1248;
+    border-radius: 10px;
+
+    opacity: 0%;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+#card3 h1 {
+    padding: 10px;
+    padding-top: 0px;
+}
+
+#card3 ul {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+
+
+#card4 {
+    position: absolute;
+    bottom: calc(10vh + 60px);
+    right: 15vw;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    margin: 20px;
+    margin-top: 60px;
+
+    box-shadow: 5px 5px 20px #1248;
+    border-radius: 10px;
+
+    opacity: 0%;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+#card4 h1 {
+    padding: 10px;
+    padding-top: 0px;
+}
+
+#card4 p {
+    padding-bottom: 20px;
+}
+
+
+#scrollTimeline {
+    position: absolute;
+    width: 88%;
+    bottom: 0px;
+
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+
 .left {
     padding: 10vw;
     padding-bottom: 0px;
