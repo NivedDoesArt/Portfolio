@@ -9,23 +9,6 @@ window.onload = async function () {
     console.log(sessionStorage.getItem('cvScroll'))
 
     sessionStorage.setItem('cvScroll', null)
-
-
-    document.getElementById('card' + 1).style.opacity = '100%'
-    document.getElementById('card' + 1).style.transform = 'translateY(0px)'
-    await new Promise(r => setTimeout(r, 500));
-
-    document.getElementById('card' + 2).style.opacity = '100%'
-    document.getElementById('card' + 2).style.transform = 'translateY(0px)'
-    await new Promise(r => setTimeout(r, 500));
-
-    document.getElementById('card' + 3).style.opacity = '100%'
-    document.getElementById('card' + 3).style.transform = 'translateY(0px)'
-    await new Promise(r => setTimeout(r, 500));
-
-    document.getElementById('card' + 4).style.opacity = '100%'
-    document.getElementById('card' + 4).style.transform = 'translateY(0px)'
-    await new Promise(r => setTimeout(r, 500));
 }
 
 

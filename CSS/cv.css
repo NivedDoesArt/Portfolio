@@ -94,7 +94,8 @@
 
     opacity: 0%;
     transform: translateY(50px);
-    transition: 1s;
+    animation: loading 1s forwards;
+    animation-delay: 500ms;
 }
 
 #card1 h1 {
@@ -134,7 +135,8 @@
 
     opacity: 0%;
     transform: translateY(50px);
-    transition: 1s;
+    animation: loading 1s forwards;
+    animation-delay: 1000ms;
 }
 
 #card2 h1 {
@@ -161,7 +163,8 @@
 
     opacity: 0%;
     transform: translateY(50px);
-    transition: 1s;
+    animation: loading 1s forwards;
+    animation-delay: 1500ms;
 }
 
 #card3 h1 {
@@ -191,7 +194,8 @@
 
     opacity: 0%;
     transform: translateY(50px);
-    transition: 1s;
+    animation: loading 1s forwards;
+    animation-delay: 2000ms;
 }
 
 #card4 h1 {
@@ -284,4 +288,20 @@ button:hover {
 
 button:active {
     transform: translateY(-1px) !important;
+}
+
+
+
+/* ANIMATIONS */
+
+@keyframes loading {
+    0% {
+        opacity: 0%;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
 }
