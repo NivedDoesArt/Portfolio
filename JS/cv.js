@@ -6,9 +6,19 @@ window.onload = async function () {
 
 
 
-    console.log(sessionStorage.getItem('cvScroll'))
+    if (location.hash != '') {
+        var saveScrollTo1 = location.hash
+        var saveScrollTo2 = saveScrollTo1.replace('#', '');
 
-    sessionStorage.setItem('cvScroll', null)
+        document.getElementById('timelineElement' + saveScrollTo2).scrollIntoView({ behavior: "smooth"})
+
+        await new Promise(r => setTimeout(r, 900));
+
+        document.getElementById('timelineElement' + saveScrollTo2).children[0].style.backgroundColor = '#8af'
+        document.getElementById('timelineElement' + saveScrollTo2).children[0].style.borderRadius = '50px'
+        await new Promise(r => setTimeout(r, 600));
+        document.getElementById('timelineElement' + saveScrollTo2).children[0].removeAttribute('style')
+    }
 }
 
 

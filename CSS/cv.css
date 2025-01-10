@@ -91,6 +91,7 @@
 
     box-shadow: 5px 5px 20px #1248;
     border-radius: 10px;
+    background-color: #fffb;
 
     opacity: 0%;
     transform: translateY(50px);
@@ -132,6 +133,7 @@
 
     box-shadow: 5px 5px 20px #1248;
     border-radius: 10px;
+    background-color: #fffb;
 
     opacity: 0%;
     transform: translateY(50px);
@@ -160,6 +162,7 @@
 
     box-shadow: 5px 5px 20px #1248;
     border-radius: 10px;
+    background-color: #fffb;
 
     opacity: 0%;
     transform: translateY(50px);
@@ -191,6 +194,7 @@
 
     box-shadow: 5px 5px 20px #1248;
     border-radius: 10px;
+    background-color: #fffb;
 
     opacity: 0%;
     transform: translateY(50px);
@@ -229,6 +233,8 @@
 
 .left h1 {
     font-size: 3rem;
+
+    transition: 0.5s;
 }
 
 .left h2 {
@@ -253,6 +259,8 @@
 
 .right h1 {
     font-size: 3rem;
+
+    transition: 0.5s;
 }
 
 .right h2 {
