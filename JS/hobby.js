@@ -111,7 +111,7 @@ function nextImage() {
         maxScrollAmount = 13
     }
     if (selectedList == 2) {
-        maxScrollAmount = 18
+        maxScrollAmount = 21
     }
     if (selectedList == 3) {
         maxScrollAmount = 11
@@ -143,7 +143,7 @@ function prevImage() {
         maxScrollAmount = 13
     }
     if (selectedList == 2) {
-        maxScrollAmount = 18
+        maxScrollAmount = 21
     }
     if (selectedList == 3) {
         maxScrollAmount = 11
