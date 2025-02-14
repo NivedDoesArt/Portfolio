@@ -245,7 +245,7 @@ if (window.innerWidth < 1000) {
     document.getElementById('contentDecoration1').style.transform = 'scale(200%) translateX(25vw)'
     document.getElementById('contentDecoration2').style.transform = 'scale(200%) translateX(-25vw)'
 
-    for (i = 1; i <= 11; i++) {
+    for (i = 1; i <= 12; i++) {
         document.getElementById('timelineElement' + i).children[0].setAttribute('style', 'font-size: calc(3vw);')
         document.getElementById('timelineElement' + i).children[1].setAttribute('style', 'font-size: calc(3vw);')
         document.getElementById('timelineElement' + i).children[2].setAttribute('style', 'font-size: calc(3vw);')
