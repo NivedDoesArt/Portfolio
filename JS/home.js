@@ -46,6 +46,10 @@ function scrollAnimationPresets() {
         document.getElementById('timelineElement11').style.opacity = '100%'
         document.getElementById('timelineElement11').style.transform = 'scale(100%)'
     }
+    if (distanceScrolled >= 2168 && timelineAnimationToggle == 2) {
+        document.getElementById('timelineElement12').style.opacity = '100%'
+        document.getElementById('timelineElement12').style.transform = 'scale(100%)'
+    }
 }
 
 addEventListener("scroll", (event) => {
@@ -64,7 +68,6 @@ addEventListener("scroll", (event) => {
 });
 
 window.onload = async function () {
-    console.log('good morning :O')
 
     document.getElementById('body').style.opacity = '100%'
     document.getElementById('backgroundDevin').style.transform = 'scale(100%)'
@@ -221,8 +224,6 @@ async function nextImage() {
 // DETECT MOBILE MODE OR WHATEVER HAHA
 
 if (window.innerWidth < 1000) {
-    console.log('Mobile mode enabled')
-
     document.getElementById('header').children[0].remove()
     document.getElementById('header').children[0].remove()
     document.getElementById('header').style.height = '50px'
