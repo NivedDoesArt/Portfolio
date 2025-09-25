@@ -92,18 +92,10 @@ window.onload = async function () {
 
     await new Promise(r => setTimeout(r, 150));
 
-    if (document.getElementById('animate4')) {
-        document.getElementById('animate4').style.opacity = '100%'
-        document.getElementById('animate4').style.transform = 'translateY(0px)'    
-    }
     document.getElementById('animate3').style.transform = 'translateY(0px)'
 
     await new Promise(r => setTimeout(r, 250));
 
-    if (document.getElementById('animate5')) {
-        document.getElementById('animate5').style.opacity = '100%'
-        document.getElementById('animate5').style.transform = 'translateY(0px)'    
-    }
     document.getElementById('animate3').style.opacity = '100%'
 }
 

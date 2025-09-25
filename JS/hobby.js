@@ -7,7 +7,7 @@ window.onload = async function () {
 
 // DETECT MOBILE MODE OR WHATEVER HAHA
 
-var imageDeviceScale = 90
+let imageDeviceScale = 90
 
 if (window.innerWidth < 1000) {
     document.getElementById('header').children[0].remove()
@@ -31,7 +31,7 @@ if (window.innerWidth < 1000) {
         document.getElementById('imgGal' + i).style.width = '100%'
         document.getElementById('imgGal' + i).style.marginLeft = '0px'
         document.getElementById('imgGal' + i).style.marginRight = '0px'
-        var imgGal = (document.getElementById('imgGal' + i).children.length - 1)
+        let imgGal = (document.getElementById('imgGal' + i).children.length - 1)
         for (ii = 0; ii <= imgGal; ii++) {
             document.getElementById('imgGal' + i).children[ii].setAttribute('style', 'opacity: 100%; transform: scale(98%); filter: saturate(100%);')
         }
@@ -47,16 +47,13 @@ if (window.innerWidth < 1000) {
 }
 
 
+let imageDisplayStatus = false;
 
+let selectedList = null
+let imageWithinList = null
+let maxScrollAmount = null
 
-
-var imageDisplayStatus = false
-
-var selectedList = null
-var imageWithinList = null
-var maxScrollAmount = null
-
-var imageScrollCenter = null
+let imageScrollCenter = null
 
 async function imageDisplay(location, list, title) {
     if (imageDisplayStatus == false) {
@@ -179,3 +176,43 @@ document.getElementById('imageDisplayHolder').addEventListener("scroll", (event)
         document.getElementById('imageDisplayHolder').scrollTo(imageScrollCenter, imageScrollCenter)
     }
 })
+
+
+
+document.querySelectorAll('img').forEach(img => {
+    const tempSrc = img.src;
+    img.removeAttribute("src")
+    img.setAttribute("data-src", tempSrc);
+});
+
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.bottom > 0 &&
+        rect.right > 0 &&
+        rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.left < (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to lazy load images
+function lazyLoadImages() {
+    const images = document.querySelectorAll('img[data-src]'); // Select images with data-src attribute
+    images.forEach(img => {
+        if (isInViewport(img) && !img.src) {
+            img.src = img.getAttribute('data-src'); // Load the actual image
+            img.removeAttribute('data-src'); // Remove data-src to avoid re-checking
+        }
+    });
+}
+
+// Listen to scroll and resize events to check visibility on the fly
+window.addEventListener('scroll', lazyLoadImages);
+window.addEventListener('resize', lazyLoadImages);
+document.querySelectorAll('.imageGallary').forEach(imgGal => {
+    imgGal.addEventListener('scroll', lazyLoadImages);
+})
+
+// Run on initial page load too
+window.addEventListener('DOMContentLoaded', lazyLoadImages);
