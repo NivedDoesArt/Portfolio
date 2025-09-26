@@ -225,15 +225,19 @@ if (window.innerWidth < 1000) {
     document.getElementById('footerContact').style.width = 'calc(100% - 11%)'
 
     document.getElementById('infoCard').style.width = '80vw'
-    document.getElementById('infoCard').style.height = '30vh'
+    document.getElementById('infoCard').style.height = '40vh'
     document.getElementById('infoCard').style.left = '10vw'
     document.getElementById('infoCard').style.right = 'auto'
     document.getElementById('infoCard').style.top = 'auto'
     document.getElementById('infoCard').style.bottom = '10vh'
     document.getElementById('infoCard').children[1].setAttribute('style', 'font-size: calc(0.4rem + 2vw);')
-    document.getElementById('animate4').remove()
-    document.getElementById('animate5').remove()
 
+    if (document.getElementById('animate4')) {
+        document.getElementById('animate4').remove()
+    }
+    if (document.getElementById('animate5')) {
+        document.getElementById('animate5').remove()
+    }
     document.getElementById('contentDecoration1').style.transform = 'scale(200%) translateX(25vw)'
     document.getElementById('contentDecoration2').style.transform = 'scale(200%) translateX(-25vw)'
 
