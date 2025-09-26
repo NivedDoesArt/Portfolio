@@ -4,10 +4,14 @@ window.onbeforeunload = function () {
 
 
 
-async function navbar(location) {
-    document.getElementById('body').style.opacity = '0%'
-    await new Promise(r => setTimeout(r, 500));
-    window.location.href = location
+async function navbar(location, target) {
+    if (!target) {
+        document.getElementById('body').style.opacity = '0%'
+        await new Promise(r => setTimeout(r, 500));
+        window.location.href = location
+    } else {
+        window.open(location, '_blank')
+    }
 }
 
 

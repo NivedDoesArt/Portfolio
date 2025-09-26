@@ -1,0 +1,142 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devin de wit - Contact</title>
+
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/projects.css">
+
+</head>
+
+<body id="body">
+<header id="header">
+    <!--p onclick="window.location.href = 'index.html'">Devin de Wit</p-->
+    <ul class="socials">
+        <li title="Github repository" onclick="window.open('https://github.com/NivedDoesArt/Portfolio')">z</li>
+        <li title="Instagram" onclick="window.open('https://www.instagram.com/niveddoesart/')">i</li>
+        <li title="LinkedIn" onclick="window.open('https://www.linkedin.com/in/devin-de-wit-8a048b221/')"
+            style="font-family: Socialico;">i</li>
+        <li title="Email me!" onclick="navbar('../HTML/contact.html')">m</li>
+        <li title="Spotify" onclick="window.open('https://open.spotify.com/artist/60RFmcnTpPnMJaoy3DQJb3?si=3074ee65ef724379')">s</li>
+    </ul>
+
+    <ul class="navbar">
+        <li onclick="navbar('../index.html')">Home</li>
+        <li onclick="navbar('../HTML/hobby.html')">Hobby's</li>
+        <li onclick="navbar('../HTML/contact.html')">Contact</li>
+        <li onclick="navbar('../HTML/cv.html')">CV</li>
+        <li onclick="navbar('../HTML/projects.html')" class="currentPage">Projects</li>
+    </ul>
+
+    <!--Mobile burgermenu-->
+    <div id="burgerMenu" onclick="burgerMenuToggle()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="mobileMenu">
+        <ul class="mobileNavbar">
+            <li onclick="navbar('../index.html')">Home</li>
+            <li onclick="navbar('../HTML/hobby.html')">Hobby's</li>
+            <li onclick="navbar('../HTML/contact.html')">Contact</li>
+            <li onclick="navbar('../HTML/cv.html')">CV</li>
+            <li onclick="navbar('../HTML/projects.html')" class="currentPage">Projects</li>
+        </ul>
+
+        <ul id="mobileSocials">
+            <li title="Github repository" onclick="window.open('https://github.com/NivedDoesArt/Portfolio')">z</li>
+            <li title="Instagram" onclick="window.open('https://www.instagram.com/niveddoesart/')">i</li>
+            <li title="LinkedIn" onclick="window.open('https://www.linkedin.com/in/devin-de-wit-8a048b221/')"
+                style="font-family: Socialico;">i</li>
+            <li title="Email me!" onclick="window.location.href = '../HTML/contact.html'">m</li>
+            <li title="Spotify" onclick="window.open('https://open.spotify.com/artist/60RFmcnTpPnMJaoy3DQJb3?si=3074ee65ef724379')">s</li>
+        </ul>
+    </div>
+</header>
+
+
+
+<div id="content">
+    <div>
+        <h1>Tab Writer</h1>
+        <img src="../IMG/hobby/hobby6/5.jpg" alt="Tab writer">
+        <p>This is a website I made for guitarists to read, write and save tabs to play!</p>
+        <button onclick="navbar('https://niveddoesart.github.io/Shine-project/', true)">Tab Writer</button>
+    </div>
+
+    <div>
+        <h1>Digital art</h1>
+        <img src="../IMG/hobby/hobby6/6.jpg" alt="Digital art">
+        <p>I've been making digital art for a handful of years as a hobby, and at some point I decided to make a website to display it.</p>
+        <button onclick="navbar('https://niveddoesart.github.io/art/', true)">Digital Art</button>
+    </div>
+
+    <div>
+        <h1>Portfolio</h1>
+        <img src="../IMG/hobby/hobby6/7.jpg" alt="Portfolio">
+        <p>Surprising or not, this website you're viewing right now was also fully coded by hand, so might as well include it.</p>
+        <button onclick="navbar('https://niveddoesart.github.io/Shine-project/', true)">Portfolio</button>
+    </div>
+
+    <div>
+        <h1>Cooking game</h1>
+        <img src="../IMG/hobby/hobby5/8.jpg" alt="Cooking game">
+        <p>As a college project, me and two other students were given the task to make a videogame using the Unity engine about <a href="https://en.wikipedia.org/wiki/Diversity,_equity,_and_inclusion">inclusiveness</a></p>
+        <a class="downloadHref" href="../GAMES/FINAL.zip" download="Cooking.zip">Download</a>
+    </div>
+
+    <div>
+        <h1>Zombies game</h1>
+        <img src="../IMG/hobby/hobby5/9.jpg" alt="Tab writer">
+        <p>My first ever Unity engine game assignment I made at SintLucas! The goal was to make a 1st person shooter and add your own twist to it.</p>
+        <a class="downloadHref" href="../GAMES/Zombie.zip" download="Zombie.zip">Download</a>
+    </div>
+</div>
+
+
+
+
+<footer>
+    <ul id="footerSocials">
+        <li>Socials</li>
+        <a target="_blank" href="https://www.instagram.com/niveddoesart/">Instagram</a>
+        <a target="_blank" href="https://www.facebook.com/devin.dewit.39">Facebook</a>
+        <a target="_blank" href="https://www.linkedin.com/in/devin-de-wit-8a048b221/">LinkedIn</a>
+        <a target="_blank" href="https://github.com/NivedDoesArt/Portfolio">Github</a>
+        <a target="_blank" href="https://open.spotify.com/artist/60RFmcnTpPnMJaoy3DQJb3?si=3074ee65ef724379">Spotify</a>
+    </ul>
+
+    <ul id="footerLinks">
+        <li>Links</li>
+        <a href="../index.html">Home</a>
+        <a href="../HTML/hobby.html">Hobby's</a>
+        <a href="../HTML/contact.html">Contact</a>
+        <a href="../HTML/cv.html">CV</a>
+        <a href="../HTML/projects.html">Projects</a>
+    </ul>
+
+    <ul id="footerContact">
+        <li>Contact info</li>
+        <p>Devin de Wit</p>
+        <p>+31 6 11397896</p>
+        <p>devindewit2004@gmail.com</p>
+        <a href="HTML/contact.html">More</a>
+        <p>&nbsp;</p>
+    </ul>
+
+    <p><br>Bedankt voor het bekijken van mijn portfolio! Alles is handmatig met HTML, CSS en JS gecodeerd. :D</p>
+
+    <p>Fonts provided by <a href="https://fonts.google.com/selection" target="_blank">Google Fonts</a><br>
+        Frontend hosted by <a href="https://github.com/NivedDoesArt/Portfolio" target="_blank">Github pages</a></p>
+
+    <p>copyright © 2024 - 2025 | by Devin de Wit<br>All rights reserved.</p>
+</footer>
+</body>
+
+<script src="../JS/main.js"></script>
+<script src="../JS/projects.js"></script>
+
+</html>

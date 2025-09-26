@@ -85,7 +85,6 @@
     margin: 0px;
 
     color: #fff;
-    text-shadow: none;
     font-weight: 900;
     text-align: center;
 }
@@ -96,6 +95,7 @@
     text-align-last: left;
 
     font-size: calc(0.5em + 0.6vw);
+    text-shadow: #000 2px 2px 15px;
     color: #fff;
 }
 
