@@ -13,8 +13,8 @@
 }
 
 #content div {
-    height: 50vh;
-    width: calc(25% - 40px);
+    height: calc(20vh + 20vw);
+    width: calc((100% / 3) - 41px);
     margin: 10px;
     padding: 10px;
     display: flex;
@@ -63,5 +63,5 @@
 
 #content div button:hover,
 #content div a:hover{
-    transform: scale(1.05);
+    transform: translateY(-2px) scale(1.01);
 }
