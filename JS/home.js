@@ -112,7 +112,7 @@ async function tlAnimToggle() {
     document.getElementById('middleLine').style.marginLeft = 'calc((100% / 2) - (3px / 2))'
     document.getElementById('middleLine').style.marginRight = 'calc((100% / 2) - (3px / 2))'
 
-    await new Promise(r => setTimeout(r, 1250));
+    await new Promise(r => setTimeout(r, 600));
 
     document.getElementById('middleLine').style.height = '100%'
 

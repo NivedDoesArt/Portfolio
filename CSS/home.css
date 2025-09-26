@@ -274,7 +274,7 @@ unique {
     text-align-last: justify;
     z-index: -1;
 
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .timelineDeco {
