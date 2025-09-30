@@ -1,9 +1,4 @@
 
-window.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('body').style.opacity = '100%'
-    document.getElementById('header').style.transform = 'scale(100%)'
-})
-
 if (window.innerWidth < 1300) {
     for (let i = 0; i < document.getElementById('content').children.length; i++) {
         document.getElementById('content').children[i].setAttribute('style', 'width: calc((100% / 3) - 41px); height: calc(20vh + 20vw);')

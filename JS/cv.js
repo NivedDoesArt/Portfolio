@@ -1,10 +1,5 @@
 window.onload = async function () {
 
-    document.getElementById('body').style.opacity = '100%'
-    document.getElementById('header').style.transform = 'scale(100%)'
-
-
-
     if (location.hash != '') {
         var saveScrollTo1 = location.hash
         var saveScrollTo2 = saveScrollTo1.replace('#', '');

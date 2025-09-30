@@ -1,10 +1,3 @@
-window.onload = async function () {
-    document.getElementById('body').style.opacity = '100%'
-    document.getElementById('header').style.transform = 'scale(100%)'
-}
-
-
-
 // DETECT MOBILE MODE OR WHATEVER HAHA
 
 let imageDeviceScale = 90
@@ -18,7 +11,7 @@ if (window.innerWidth < 1000) {
     document.getElementById('footerLinks').style.width = 'calc((100% / 2) - 11%)'
     document.getElementById('footerContact').style.width = 'calc(100% - 11%)'
 
-    for (i = 1; i <= 7; i++) {
+    for (let i = 1; i <= 7; i++) {
         document.getElementById('title' + i).style.fontSize = '8vw'
 
         document.getElementById('description' + i).style.width = 'calc(100% - (9.5vw * 2))'
@@ -32,7 +25,7 @@ if (window.innerWidth < 1000) {
         document.getElementById('imgGal' + i).style.marginLeft = '0px'
         document.getElementById('imgGal' + i).style.marginRight = '0px'
         let imgGal = (document.getElementById('imgGal' + i).children.length - 1)
-        for (ii = 0; ii <= imgGal; ii++) {
+        for (let ii = 0; ii <= imgGal; ii++) {
             document.getElementById('imgGal' + i).children[ii].setAttribute('style', 'opacity: 100%; transform: scale(98%); filter: saturate(100%);')
         }
     }
@@ -56,6 +49,8 @@ let maxScrollAmount = null
 let imageScrollCenter = null
 
 async function imageDisplay(location, list, title) {
+    document.getElementById('imageDisplayImg').setAttribute('src', '../IMG/hobby/loading.png')
+
     if (imageDisplayStatus == false) {
         imageDisplayStatus = true
         selectedList = list
@@ -63,6 +58,10 @@ async function imageDisplay(location, list, title) {
 
         document.getElementById('body').style.height = '100%'
         document.getElementById('body').style.overflow = 'hidden'
+
+        if (location.split("/").includes("hobby_low")) {
+            location.split("/")[location.split("/").length] = "hobby"
+        }
 
         document.getElementById('imageDisplayImg').setAttribute('src', location)
 
@@ -99,7 +98,9 @@ async function imageDisplay(location, list, title) {
     }
 }
 
-function nextImage() {
+async function nextImage() {
+    await document.getElementById('imageDisplayImg').setAttribute('src', '../IMG/hobby/loading.png')
+
     if (selectedList == 1) {
         maxScrollAmount = 13
     }
@@ -128,10 +129,13 @@ function nextImage() {
     if (imageWithinList == maxScrollAmount + 1) {
         imageWithinList = 1
     }
+
     document.getElementById('imageDisplayImg').setAttribute('src', '../IMG/hobby/hobby' + selectedList + '/' + imageWithinList + '.jpg')
 }
 
-function prevImage() {
+async function prevImage() {
+    await document.getElementById('imageDisplayImg').setAttribute('src', '../IMG/hobby/loading.png')
+
     if (selectedList == 1) {
         maxScrollAmount = 13
     }
@@ -160,6 +164,7 @@ function prevImage() {
     if (imageWithinList == 0) {
         imageWithinList = maxScrollAmount
     }
+
     document.getElementById('imageDisplayImg').setAttribute('src', '../IMG/hobby/hobby' + selectedList + '/' + imageWithinList + '.jpg')
 }
 
@@ -167,11 +172,11 @@ function prevImage() {
 
 document.getElementById('imageDisplayHolder').addEventListener("scroll", (event) => {
 
-    if (document.getElementById('imageDisplayHolder').scrollLeft == imageScrollCenter * 2) {
+    if (document.getElementById('imageDisplayHolder').scrollLeft === imageScrollCenter * 2) {
         nextImage()
         document.getElementById('imageDisplayHolder').scrollTo(imageScrollCenter, imageScrollCenter)
 
-    } else if (document.getElementById('imageDisplayHolder').scrollLeft == 0) {
+    } else if (document.getElementById('imageDisplayHolder').scrollLeft === 0) {
         prevImage()
         document.getElementById('imageDisplayHolder').scrollTo(imageScrollCenter, imageScrollCenter)
     }
@@ -181,38 +186,22 @@ document.getElementById('imageDisplayHolder').addEventListener("scroll", (event)
 
 document.querySelectorAll('img').forEach(img => {
     const tempSrc = img.src;
-    img.removeAttribute("src")
-    img.setAttribute("data-src", tempSrc);
-});
 
-// Function to check if an element is in the viewport
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.bottom > 0 &&
-        rect.right > 0 &&
-        rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.left < (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
+    let splitSrc = tempSrc.split('/');
 
-// Function to lazy load images
-function lazyLoadImages() {
-    const images = document.querySelectorAll('img[data-src]'); // Select images with data-src attribute
-    images.forEach(img => {
-        if (isInViewport(img) && !img.src) {
-            img.src = img.getAttribute('data-src'); // Load the actual image
-            img.removeAttribute('data-src'); // Remove data-src to avoid re-checking
+    if (splitSrc[splitSrc.length - 3] === "hobby_low") {
+        splitSrc[splitSrc.length - 3] = "hobby"
+
+        let joinedSrc = ""
+        for (let i = 0; i < splitSrc.length; i++) {
+            joinedSrc += splitSrc[i]
+            if (i !== splitSrc.length - 1) {
+                joinedSrc += "/"
+            }
         }
-    });
-}
 
-// Listen to scroll and resize events to check visibility on the fly
-window.addEventListener('scroll', lazyLoadImages);
-window.addEventListener('resize', lazyLoadImages);
-document.querySelectorAll('.imageGallary').forEach(imgGal => {
-    imgGal.addEventListener('scroll', lazyLoadImages);
-})
+        console.log(joinedSrc);
 
-// Run on initial page load too
-window.addEventListener('DOMContentLoaded', lazyLoadImages);
+        img.src = joinedSrc;
+    }
+});

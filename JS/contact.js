@@ -1,11 +1,3 @@
-window.onload = async function() {
-
-    document.getElementById('body').style.opacity = '100%'
-    document.getElementById('header').style.transform = 'scale(100%)'
-}
-
-
-
 // DETECT MOBILE MODE OR WHATEVER HAHA
 
 if (window.innerWidth < 1000) {

@@ -69,11 +69,7 @@ addEventListener("scroll", (event) => {
 
 window.onload = async function () {
 
-    document.getElementById('body').style.opacity = '100%'
     document.getElementById('backgroundDevin').style.transform = 'scale(100%)'
-    if (document.getElementById('header')) {
-        document.getElementById('header').style.transform = 'scale(100%)'
-    }
 
     await new Promise(r => setTimeout(r, 1000));
 

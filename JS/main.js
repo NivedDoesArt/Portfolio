@@ -2,6 +2,10 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0)
 }
 
+document.getElementById('body').style.opacity = '100%'
+if (document.getElementById('header')) {
+    document.getElementById('header').style.transform = 'scale(100%)'
+}
 
 
 async function navbar(location, target) {
@@ -20,7 +24,7 @@ if (window.innerWidth >= 1000) {
     document.getElementById('burgerMenu').remove()
 }
 
-var burgerMenuState = false
+let burgerMenuState = false
 
 function burgerMenuToggle() {
     if (burgerMenuState == false) {
