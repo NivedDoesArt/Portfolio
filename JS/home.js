@@ -54,7 +54,7 @@ function scrollAnimationPresets() {
 
 addEventListener("scroll", (event) => {
     distanceScrolled = window.scrollY
-    document.getElementById('backgroundDevin').style.transform = 'scale(' + (100 + (distanceScrolled / 75)) + '%) translateY(-' + (distanceScrolled / 4) + 'px)'
+    document.getElementById('backgroundDevin').style.transform = 'scale(' + (100 + (distanceScrolled / 25)) + '%) translateY(-' + (distanceScrolled / 4) + 'px)'
 
     document.getElementById('moreScroll').style = null
 

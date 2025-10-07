@@ -240,7 +240,8 @@ unique {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    cursor: pointer;
+    
     transition: 0.5s;
     transform: scale(90%) translateX(55vw);
 }
@@ -255,6 +256,7 @@ unique {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
 
     transition: 0.5s;
     transform: scale(90%) translateX(-55vw);
@@ -334,7 +336,6 @@ unique {
     margin-left: 50%;
     margin-top: 5vh;
 
-    text-align: right;
     box-shadow: inset #224 0px -1px;
     color: #224;
     text-align: justify;
@@ -343,6 +344,11 @@ unique {
     transition: 0.5s;
     opacity: 0%;
     transform: scale(90%);
+}
+
+.rightTL > *,
+.leftTL > * {
+    margin: 0.75rem;
 }
 
 .rightTL h2 {
