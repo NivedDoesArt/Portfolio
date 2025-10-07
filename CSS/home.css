@@ -241,7 +241,7 @@ unique {
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
-    
+
     transition: 0.5s;
     transform: scale(90%) translateX(55vw);
 }
@@ -348,7 +348,12 @@ unique {
 
 .rightTL > *,
 .leftTL > * {
-    margin: 0.75rem;
+    margin: 1rem;
+}
+
+.rightTL > *:last-child,
+.leftTL > *:last-child {
+    margin-bottom: 0;
 }
 
 .rightTL h2 {
